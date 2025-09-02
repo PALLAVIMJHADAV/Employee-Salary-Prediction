@@ -1,65 +1,51 @@
-Employee Salary Prediction
+# Employee Salary Prediction
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://employee-salary-prediction-fpuzgx7ry3e5kravdvpvs3.streamlit.app/)
+
 A machine learning-powered web application that predicts employee salaries based on factors like age, projects completed, productivity, satisfaction rate, department, position, and feedback score. The system helps HR departments make data-driven and unbiased salary decisions.
 
-Features:
+---
 
-1.Predict employee salaries instantly using an ML model.
-2.Streamlit-based interactive web interface with theme customization.
-3.Encodes categorical variables (Department, Position) using pre-trained encoders.
-4.Trained with an XGBoost Regressor for high accuracy.
-5.Saves and loads models using joblib.
+## 🌐 Live Web App
 
-Tech Stack:
+Access the deployed Employee Salary Prediction app here: [Open App](https://employee-salary-prediction-fpuzgx7ry3e5kravdvpvs3.streamlit.app/)
 
-1.Programming Language: Python 3.x
-2.Framework: Streamlit
-3.Machine Learning: XGBoost, scikit-learn
-4.Data Handling: pandas, numpy
-5.Model Persistence: joblib
+---
 
-Requirements:
+## Features
 
- Make sure you have the following installed:
-1.Python 3.x
-2.Streamlit
-3.pandas
-4.numpy
-5.scikit-learn
-6.xgboost
-7.joblib
+- Predict employee salaries instantly using a pre-trained ML model.
+- Streamlit-based interactive web interface with theme customization.
+- Encodes categorical variables (Department, Position) using pre-trained encoders.
+- Trained with an XGBoost Regressor for high accuracy.
+- Saves and loads models using joblib.
+- Real-time predictions with minimal latency.
 
-How to Run:
+---
 
-Clone this repository:
-git clone https://github.com/your-username/employee-salary-prediction.git
+## Tech Stack
 
-Navigate into the project folder:
-cd employee-salary-prediction
+- **Programming Language:** Python 3.x
+- **Framework:** Streamlit
+- **Machine Learning:** XGBoost, scikit-learn
+- **Data Handling:** pandas, numpy
+- **Model Persistence:** joblib
 
-Run the Streamlit app:
-streamlit run app.py
+---
 
-Enter employee details and get instant salary predictions.
+## Requirements
 
-Project Structure:
+Make sure you have the following installed:
 
-.
-├── app.py                   # Streamlit app for predictions
-├── create_model_files.py    # Script to train model and save .pkl files
-├── salary_model.pkl         # Trained ML model
-├── Department_encoder.pkl   # Encoder for Department
-├── Position_encoder.pkl     # Encoder for Position
-├── scaler.pkl               # (Optional) Scaler for normalization
-├── data.csv / emp_data.csv  # Dataset
-└── README.md
+- Python 3.x
+- streamlit
+- pandas
+- numpy
+- scikit-learn
+- xgboost
+- joblib
 
-System Approach:
+Install missing packages using:
 
-1.Data Collection and Preprocessing
-2.Model Training using XGBoost Regressor
-3.Saving model and encoders
-4.Building a Streamlit-based web application
-5.Predicting salaries in real-time
-
-Deployment:
-Can be deployed using Streamlit Cloud, Heroku, or any Python-supported hosting.
+```bash
+pip install -r requirements.txt
