@@ -78,29 +78,30 @@ else:
     dept_encoder = joblib.load(DEPT_ENCODER_FILE)
     pos_encoder = joblib.load(POS_ENCODER_FILE)
 
-    # Input form inside a styled card
+   # Input form inside a styled card
     st.markdown("<div class='form-card'>", unsafe_allow_html=True)
 
     st.markdown("<h4>👤 Age</h4>", unsafe_allow_html=True)
-    age = st.number_input(label="", min_value=18, max_value=65, value=30, label_visibility="collapsed")
+    age = st.number_input("Age", min_value=18, max_value=65, value=30, label_visibility="collapsed")
 
     st.markdown("<h4>📊 Projects Completed</h4>", unsafe_allow_html=True)
-    projects = st.number_input(label="", min_value=0, value=5, label_visibility="collapsed")
+    projects = st.number_input("Projects", min_value=0, value=5, label_visibility="collapsed")
 
     st.markdown("<h4>⚡ Productivity (%)</h4>", unsafe_allow_html=True)
-    productivity = st.slider(label="", min_value=0, max_value=100, value=75, label_visibility="collapsed")
+    productivity = st.slider("Productivity", min_value=0, max_value=100, value=75, label_visibility="collapsed")
 
     st.markdown("<h4>😊 Satisfaction Rate (%)</h4>", unsafe_allow_html=True)
-    satisfaction = st.slider(label="", min_value=0, max_value=100, value=80, label_visibility="collapsed")
+    satisfaction = st.slider("Satisfaction", min_value=0, max_value=100, value=80, label_visibility="collapsed")
 
     st.markdown("<h4>🏢 Department</h4>", unsafe_allow_html=True)
-    department = st.selectbox(label="", options=dept_encoder.classes_, label_visibility="collapsed")
+    department = st.selectbox("Department", options=dept_encoder.classes_, label_visibility="collapsed")
 
     st.markdown("<h4>💼 Position</h4>", unsafe_allow_html=True)
-    position = st.selectbox(label="", options=pos_encoder.classes_, label_visibility="collapsed")
+    position = st.selectbox("Position", options=pos_encoder.classes_, label_visibility="collapsed")
 
     st.markdown("<h4>⭐ Feedback Score</h4>", unsafe_allow_html=True)
-    feedback = st.number_input(label="", min_value=0.0, max_value=10.0, value=8.0, label_visibility="collapsed")
+    feedback = st.number_input("Feedback", min_value=0.0, max_value=10.0, value=8.0, label_visibility="collapsed")
+
 
     if st.button("Predict Salary"):
         dept_encoded = dept_encoder.transform([department])[0]
